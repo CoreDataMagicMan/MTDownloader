@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="n89-Za-6Xz">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--下载图片-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="MTDownloadViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QXL-BE-gEa">
+                                <rect key="frame" x="20" y="366" width="172" height="100"/>
+                                <color key="backgroundColor" red="1" green="0.1190752845" blue="0.16790935130000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="tD6-Pd-o9U"/>
+                                </constraints>
+                                <state key="normal" title="下载">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="tD6-Pd-o9U"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="downloader:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="IwB-K9-kqw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="boW-5c-mbZ">
+                                <rect key="frame" x="214" y="366" width="173" height="100"/>
+                                <color key="backgroundColor" red="1" green="0.1190752845" blue="0.16790935130000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="tmC-eP-oPX"/>
+                                </constraints>
+                                <state key="normal" title="暂停">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pause:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="gvs-9M-LN0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fVr-8r-6Kb">
+                                <rect key="frame" x="408" y="366" width="176" height="100"/>
+                                <color key="backgroundColor" red="1" green="0.1190752845" blue="0.16790935130000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="1k0-m0-4IY"/>
+                                </constraints>
+                                <state key="normal" title="继续">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="resume:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="qcD-eg-j9o"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cY3-Hh-RvI">
+                                <rect key="frame" x="20" y="482" width="560" height="46"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="FBP-Is-bal"/>
+                                    <constraint firstAttribute="width" constant="560" id="iWV-eY-uc7"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="iWV-eY-uc7"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="e1E-Fd-iKw">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="348"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="boW-5c-mbZ" firstAttribute="centerX" secondItem="e1E-Fd-iKw" secondAttribute="centerX" id="02v-lL-Dxr"/>
+                            <constraint firstItem="boW-5c-mbZ" firstAttribute="bottom" secondItem="fVr-8r-6Kb" secondAttribute="bottom" id="0Qb-PY-gbK"/>
+                            <constraint firstItem="QXL-BE-gEa" firstAttribute="leading" secondItem="cY3-Hh-RvI" secondAttribute="leading" id="1hr-LR-5oC"/>
+                            <constraint firstItem="boW-5c-mbZ" firstAttribute="leading" secondItem="QXL-BE-gEa" secondAttribute="trailing" constant="22" id="36k-vl-3nw"/>
+                            <constraint firstItem="cY3-Hh-RvI" firstAttribute="top" secondItem="QXL-BE-gEa" secondAttribute="bottom" constant="8" symbolic="YES" id="3Wr-vS-yul"/>
+                            <constraint firstAttribute="trailing" secondItem="fVr-8r-6Kb" secondAttribute="trailing" constant="16" id="6xf-RJ-B92"/>
+                            <constraint firstItem="fVr-8r-6Kb" firstAttribute="leading" secondItem="boW-5c-mbZ" secondAttribute="trailing" constant="21" id="Br5-A8-mPU"/>
+                            <constraint firstAttribute="trailing" secondItem="e1E-Fd-iKw" secondAttribute="trailing" id="D8O-2o-ofj"/>
+                            <constraint firstItem="QXL-BE-gEa" firstAttribute="width" secondItem="fVr-8r-6Kb" secondAttribute="width" id="Jj6-eP-IgA"/>
+                            <constraint firstItem="QXL-BE-gEa" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" symbolic="YES" id="MtE-xe-lzM"/>
+                            <constraint firstItem="cY3-Hh-RvI" firstAttribute="top" secondItem="fVr-8r-6Kb" secondAttribute="bottom" constant="16" id="OBB-ec-5PI"/>
+                            <constraint firstItem="QXL-BE-gEa" firstAttribute="width" secondItem="boW-5c-mbZ" secondAttribute="width" id="Pgj-bj-Eyt"/>
+                            <constraint firstItem="boW-5c-mbZ" firstAttribute="centerX" secondItem="cY3-Hh-RvI" secondAttribute="centerX" id="SRw-GK-TN0"/>
+                            <constraint firstItem="boW-5c-mbZ" firstAttribute="leading" secondItem="QXL-BE-gEa" secondAttribute="trailing" constant="8" symbolic="YES" id="TCM-SP-KQi"/>
+                            <constraint firstItem="fVr-8r-6Kb" firstAttribute="top" secondItem="e1E-Fd-iKw" secondAttribute="bottom" constant="18" id="a7q-FV-rOd"/>
+                            <constraint firstItem="e1E-Fd-iKw" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="fMM-cv-Maj"/>
+                            <constraint firstItem="e1E-Fd-iKw" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="hZe-PG-n7Z"/>
+                            <constraint firstItem="boW-5c-mbZ" firstAttribute="leading" secondItem="QXL-BE-gEa" secondAttribute="trailing" constant="8" symbolic="YES" id="kgG-Ou-f2Q"/>
+                            <constraint firstItem="cY3-Hh-RvI" firstAttribute="trailing" secondItem="fVr-8r-6Kb" secondAttribute="trailing" constant="-4" id="mIo-qW-shD"/>
+                            <constraint firstItem="fVr-8r-6Kb" firstAttribute="leading" secondItem="boW-5c-mbZ" secondAttribute="trailing" constant="8" symbolic="YES" id="oDx-Mo-AK6"/>
+                            <constraint firstItem="boW-5c-mbZ" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="p7W-GB-aWm"/>
+                            <constraint firstItem="QXL-BE-gEa" firstAttribute="height" secondItem="boW-5c-mbZ" secondAttribute="height" id="pBI-D6-i3j"/>
+                            <constraint firstItem="cY3-Hh-RvI" firstAttribute="top" secondItem="fVr-8r-6Kb" secondAttribute="bottom" constant="16" id="qHZ-Bo-rlS"/>
+                            <constraint firstItem="cY3-Hh-RvI" firstAttribute="top" secondItem="fVr-8r-6Kb" secondAttribute="bottom" constant="8" symbolic="YES" id="qaH-Y4-deh"/>
+                            <constraint firstItem="QXL-BE-gEa" firstAttribute="height" secondItem="fVr-8r-6Kb" secondAttribute="height" id="qk7-DA-YI7"/>
+                            <constraint firstItem="QXL-BE-gEa" firstAttribute="bottom" secondItem="fVr-8r-6Kb" secondAttribute="bottom" id="qu7-7L-rxa"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="cY3-Hh-RvI" secondAttribute="bottom" constant="8" symbolic="YES" id="rkk-qN-N1r"/>
+                            <constraint firstAttribute="centerX" secondItem="boW-5c-mbZ" secondAttribute="centerX" id="rpc-kW-5AG"/>
+                            <constraint firstItem="boW-5c-mbZ" firstAttribute="bottom" secondItem="QXL-BE-gEa" secondAttribute="bottom" id="tRv-2d-cdS"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Jj6-eP-IgA"/>
+                                <exclude reference="MtE-xe-lzM"/>
+                                <exclude reference="qu7-7L-rxa"/>
+                                <exclude reference="TCM-SP-KQi"/>
+                                <exclude reference="kgG-Ou-f2Q"/>
+                                <exclude reference="rpc-kW-5AG"/>
+                                <exclude reference="3Wr-vS-yul"/>
+                                <exclude reference="OBB-ec-5PI"/>
+                                <exclude reference="qaH-Y4-deh"/>
+                                <exclude reference="oDx-Mo-AK6"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <navigationItem key="navigationItem" title="下载图片" id="aud-Xe-ggi"/>
+                    <connections>
+                        <outlet property="picImage" destination="e1E-Fd-iKw" id="k9s-08-si5"/>
+                        <outlet property="progressView" destination="cY3-Hh-RvI" id="6tb-ex-ImT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1054" y="429"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="F9a-ze-ubL">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="n89-Za-6Xz" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jDO-DL-s4a">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="oS4-FQ-Q71"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NLS-QZ-ipz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="246" y="1090"/>
+        </scene>
+    </scenes>
+</document>
